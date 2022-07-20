@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Club Robotique d'enfant </title>
+    <link href="style2.css" rel="stylesheet" type="text/css" />
+    <link rel="icon" href="1.png" alt="photo" />
+    <meta content="robot">
+    <meta content="robotique">
+    <meta content="programme">
+    <meta content="programmeur">
+    <meta content="Programmation">
+    <meta content="enfant">
+    <meta content="club">
+    <meta content="clubrobotiqued">
+    <script type="text/javascript">
+        function verif1() {
+            let n = document.getElementById("nom").value;
+            if (n == "" || n == " " || isNaN(n) == false) {
+                document.getElementById("s1").innerHTML = " * champ obligatoire";
+                document.getElementById("s1").style.color = "red";
+                document.getElementById("nom").style.borderColor = "red";
+            } else {
+                document.getElementById("s1").innerHTML = " &#10004";
+                document.getElementById("s1").style.color = "green";
+                document.getElementById("nom").style.borderColor = "green";
+            }
+        }
+
+        function verif2() {
+            let n = document.getElementById("tel").value;
+            if (n == "" || n == " ") {
+                document.getElementById("s2").innerHTML = " * champ obligatoire";
+                document.getElementById("s2").style.color = "red";
+                document.getElementById("tel").style.borderColor = "red";
+            } else if (isNaN(n)) {
+                document.getElementById("s2").innerHTML = " * entre des valeur numerique";
+                document.getElementById("s2").style.color = "red";
+                document.getElementById("tel").style.borderColor = "red";
+            } else {
+                document.getElementById("s2").innerHTML = " &#10004";
+                document.getElementById("s2").style.color = "green";
+                document.getElementById("tel").style.borderColor = "green";
+            }
+        }
+
+        function verif4() {
+            let n = document.getElementById("nomenf").value;
+            if (n == "" || n == " " || isNaN(n) == false) {
+                document.getElementById("s4").innerHTML = "* champ obligatoire";
+                document.getElementById("s4").style.color = "red";
+                document.getElementById("nomef").style.borderColor = "red";
+            } else {
+                document.getElementById("s4").innerHTML = " &#10004";
+                document.getElementById("s4").style.color = "green";
+                document.getElementById("nomenf").style.borderColor = "green";
+            }
+        }
+
+        function checkEmail(email) {
+            let re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+            return re.test(email);
+        }
+
+        function verif3() {
+            let email = document.getElementById("email").value;
+            if (checkEmail(email) || email == " ") {
+                document.getElementById("s3").innerHTML = " &#10004";
+                document.getElementById("s3").style.color = "green";
+                document.getElementById("email").style.borderColor = "green";
+            } else {
+                document.getElementById("s3").innerHTML = "Adresse e-mail non valide";
+                document.getElementById("s3").style.color = "red";
+                document.getElementById("email").style.borderColor = "red";
+            }
+
+        }
+
+        function verif5() {
+            let valide = true;
+            if (document.getElementById("check1").checked) {
+                valide = true;
+            } else if (document.getElementById("check2").checked) {
+                valide = true;
+            } else if (document.getElementById("check3").checked) {
+                valide = true;
+            } else if (document.getElementById("check4").checked) {
+                valide = true;
+            } else if (document.getElementById("check5").checked) {
+                valide = true;
+            } else {
+                valide = false;
+            }
+            if (valide) {
+                document.getElementById("s5").innerHTML = " &#10004";
+                document.getElementById("s5").style.color = "green";
+            } else {
+                document.getElementById("s5").innerHTML = " * champ obligatoire";
+                document.getElementById("s5").style.color = "red";
+            }
+        }
+
+        function verif6() {
+            let valide = true;
+            if (document.getElementById("radio1").checked || document.getElementById("radio2").checked) {
+                valide = true;
+            } else {
+                valide = false;
+            }
+            if (valide) {
+                document.getElementById("s6").innerHTML = " &#10004";
+                document.getElementById("s6").style.color = "green";
+            } else {
+                document.getElementById("s6").innerHTML = " * champ obligatoire ";
+                document.getElementById("s6").style.color = "red";
+            }
+        }
+
+        function verif7() {
+            let mp = document.getElementById("mp").value;
+            if (mp.match(/[0-9]/g) &&
+                mp.match(/[A-Z]/g) &&
+                mp.match(/[a-z]/g) &&
+                mp.match(/[^a-zA-Z\d]/g)) {
+                document.getElementById("s7").innerHTML = " &#10004";
+                document.getElementById("s7").style.color = "green";
+                document.getElementById("mp").style.borderColor = "green";
+            } else {
+                document.getElementById("s7").innerHTML = " * champ obligatoire ";
+                document.getElementById("s7").style.color = "red"
+                document.getElementById("mp").style.borderColor = "red";
+            }
+        }
+
+        function verif8() {
+            let mp = document.getElementById("mp").value;
+            let mp1 = document.getElementById("mp2").value;
+            if (mp == mp1) {
+                document.getElementById("s8").innerHTML = " &#10004";
+                document.getElementById("s8").style.color = "green";
+                document.getElementById("mp2").style.borderColor = "green";
+
+            } else {
+                document.getElementById("s8").innerHTML = " * champ obligatoire et vérifier mots de passe ";
+                document.getElementById("s8").style.color = "red";
+                document.getElementById("mp2").style.borderColor = "red";
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <header>
+        <div id="it"><img src="1.png" width="120" height="120" alt="photo" />
+            <span class="titre"><span id="titre1"> club </span><span id="titre2">robotique </span><span id="titre3">d'enfant</span></span>
+        </div>
+        <div class="menu">
+            <div class="selected">
+                French
+            </div>
+            <ul>
+                <li>
+                    <a href="inscriptionang.html" class="en">English</a>
+                </li>
+                <li>
+                    <a href="inscription.html" class="fr">French</a>
+                </li>
+            </ul>
+
+        </div>
+        <nav>
+            <ul>
+                <li class="j"><a classe="lien" href="Accueil.html">Accueil </a></li>
+                <li class="j"><a classe="lien" href="Ateliers.html">Ateliers</a></li>
+                <li class="j"><a classe="lien" href="inscription.html">Inscription </a></li>
+                <li class="j"><a classe="lien" href="contact.html">contact</a> </li>
+                <li class="j" id="j1"><input class="i" type="search" name="recherche" placeholder="Recherchez..."> <button>&#128269;</button></li>
+                <li>
+                    <a href="conx.html"><img src="contact-book.png" width="145%" height="50"></a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <center>
+            <h1>Formulaire </h1>
+            <table>
+                <form>
+                    <tr>
+                        <td colspan="2">Mention obligatoires &#128522; :<br></td>
+                    </tr>
+                    <tr>
+                        <td>Nom et Prénom du parent </td>
+                        <td><input class="border" type="text" value="" id="nom" placeholder="Entre Nom et Prénom" onblur="verif1();" required /><span id="s1"></span></td>
+                    </tr>
+                    <tr>
+                        <td> Numéro de télephone </td>
+                        <td><input class="border" type="tel" maxlength="8" value="" placeholder="XXXXXXXX" id="tel" onblur="verif2();" required /><span id="s2"></span></td>
+                    </tr>
+                    <tr>
+                        <td>E-mail </td>
+                        <td><input class="border" type="email" value="" placeholder="mail@serveur.com" id="email" onblur="verif3();" required/><span id="s3"></span></td>
+                    </tr>
+                    <tr>
+                        <td>Prénom de l'enfant</td>
+                        <td><input class="border" type="text" value="" id="nomenf" placeholder="Entre Prénom de l'enfant" onblur="verif4();" required/><span id="s4"></span></td>
+                    </tr>
+                    <tr>
+                        <td>Date de naissance </td>
+                        <td><input class="border" type="date" id="date" required /> <span class="s7"></span></td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">Quelles sont les activités numerique préférés?</td>
+                        <td><input type="radio" id="radio1" name="test" value="" required />Programmation </td>
+                    </tr>
+                    <tr>
+                        <td><input type="radio" id="radio2" value="" name="test" required/>Robotique <span id="s6"></span></td>
+                    </tr>
+                    <tr>
+                        <td>loisirs préférés</td>
+                        <td><input type="checkbox" id="check1" value=" " onclick="verif6();" onblur="verif5();">Sport
+                            <input type="checkbox" id="check2" value=" " onclick="verif6();" onblur="verif5();"> Danse
+                            <input type="checkbox" id="check3" value="" onclick="verif6();" onblur="verif5();"> Peinture
+                            <input type="checkbox" id="check4" value=" " onclick="verif6();" onblur="verif5();">Musique
+                            <input type="checkbox" id="check5" value=" " onclick="verif6();" onblur="verif5();">Lecture
+                            <span id="s5"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Mots de passe </td>
+                        <td><input class="border" type="password" value="" placeholder="Entre mots de passe" maxlength="8" id="mp" onblur="verif7();" required><span id="s7"></span></td>
+                    </tr>
+                    <tr>
+                        <td> Confirmation de Mots de passe </td>
+                        <td><input class="border" type="password" value="" placeholder="Confirmée mots de passe" maxlength="8" id="mp2" onblur="verif8();" required><span id="s8"></span></td>
+                    </tr>
+                    <tr>
+                        <td>Commentaire ?</td>
+                        <td><textarea></textarea></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" class="nb">NB: mots de passe doit contenir au moins 1 caractère majuscule, au moins 1 caractère minuscule, au moins 1 chiffre et <br> au moins 1 caractère spécial.</td>
+
+                    </tr>
+                    <tr>
+                        <td colspan="2" class="conx"> <a href="conx.html">se connecter </a> </td>
+                    </tr>
+            </table><br>
+            <input class="botton" type="submit" value="Valide">
+            <input type="reset" class="botton" value="Effacer">
+            </form>
+            <br>
+            <p class="message ">Bienvenue dans le club &#128522;&#128522; </p>
+        </center>
+    </main>
+    <footer>
+        <br>
+        <br>
+        <span class="adresse">&#127968; Adresse :</span><br><br>
+        <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1NSke62TDEK2W-yozfmUXxX9PfRJ-YVkR" width="30%" height="300"></iframe>
+
+        <p class="footer">
+            &#128222; téléphone :
+            <br> 55 598 556 .
+            <br> &#128231; E-mail :
+            <br> clubrobotiqued'enfant@gmail.com .
+            <br> &#128343; Horaires de travail :
+            <br> Lundi-vendredi 8h-17h
+        </p>
+        <span class="resaux"> <a target="_blank" href="https://www.facebook.com"><img  src="facebook.png" width="3%" ></a>
+          <a target="_blank" href="https://www.instagram.com/"><img  src="instagram.webp" width="3%" ></a>
+          <a target="_blank" href="https://accounts.google.com/b/0/AddMailService"><img  src="gmail.png" width="4%" ></a>
+        </span>
+    </footer>
+</body>
+
+</html>

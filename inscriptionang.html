@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Club Robotique d'enfant </title>
+        <link href="style2.css" rel="stylesheet" type="text/css"/>
+        <link  rel="icon" href="1.png" alt="photo"/>
+        <meta content="robot">
+        <meta content="robotique">
+        <meta content="programme">
+        <meta content="programmeur">
+        <meta content="Programmation">
+        <meta content="enfant">
+        <meta content="club">
+        <meta content="clubrobotiqued">
+        <script type="text/javascript">
+         function verif1(){
+	       let  n=document.getElementById("nom").value ;
+	       if(n=="" || n==" " || isNaN(n)==false ||n.match( /[^a-zA-Z\d]/g))
+	        { document.getElementById("s1").innerHTML=" * Required Field";
+            document.getElementById("s1").style.color = "red";
+            document.getElementById("nom").style.borderColor = "red";
+	        }
+            else
+            { document.getElementById("s1").innerHTML=" &#10004";
+            document.getElementById("s1").style.color = "green"; 
+            document.getElementById("nom").style.borderColor = "green"; }
+         }
+        function verif2(){
+            let  n=document.getElementById("tel").value ;
+	       if(n=="" || n==" " )
+	        { document.getElementById("s2").innerHTML=" * Required Field";
+            document.getElementById("s2").style.color = "red";
+            document.getElementById("tel").style.borderColor = "red";
+        }
+        else if(isNaN(n))
+        {document.getElementById("s2").innerHTML=" * enter numeric values";
+        document.getElementById("s2").style.color = "red";
+        document.getElementById("tel").style.borderColor = "red";}
+        else{ document.getElementById("s2").innerHTML=" &#10004";
+        document.getElementById("s2").style.color = "green";
+        document.getElementById("tel").style.borderColor = "green";}
+        }
+        function verif4(){
+	       let n=document.getElementById("nomenf").value ;
+	       if(n==""||n==" " || isNaN(n)==false ||n.match( /[^a-zA-Z\d]/g))
+	        { document.getElementById("s4").innerHTML="* Required Field";
+            document.getElementById("s4").style.color = "red";
+            document.getElementById("nomef").style.borderColor = "red";
+	        }
+            else
+            { document.getElementById("s4").innerHTML=" &#10004";
+            document.getElementById("s4").style.color = "green";
+            document.getElementById("nomenf").style.borderColor = "green";}
+         }
+         function checkEmail(email) {
+             let re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+             return re.test(email);
+         }
+         function verif3() {
+             let  email = document.getElementById("email").value;
+              if (checkEmail(email) || email==" ") {
+                document.getElementById("s3").innerHTML=" &#10004";
+                document.getElementById("s3").style.color = "green";
+                document.getElementById("email").style.borderColor = "green";
+            }  else
+             { document.getElementById("s3").innerHTML="Email address Invalid";
+             document.getElementById("s3").style.color = "red";
+             document.getElementById("email").style.borderColor = "red";}
+             
+         }
+         function verif5()
+         { let valide=true ;
+            if(document.getElementById("check1").checked)
+            {valide=true ;}
+           else if(document.getElementById("check2").checked)
+            {valide=true ;}
+            else if(document.getElementById("check3").checked)
+            {valide=true ;}
+            else if(document.getElementById("check4").checked)
+            {valide=true ;}
+            else if(document.getElementById("check5").checked)
+            {valide=true ;}
+            else 
+             {valide=false;}
+            if(valide)
+           { document.getElementById("s5").innerHTML=" &#10004";
+            document.getElementById("s5").style.color = "green";
+        }
+            else
+           { document.getElementById("s5").innerHTML=" * Required Field";
+            document.getElementById("s5").style.color = "red";}
+            }
+        function verif6()
+         { let valide=true ;
+            if(document.getElementById("radio1").checked || document.getElementById("radio2").checked)
+            {valide=true ;}
+            else 
+             {valide=false;}
+            if(valide)
+        { document.getElementById("s6").innerHTML=" &#10004";
+            document.getElementById("s6").style.color = "green";} 
+            else
+           {document.getElementById("s6").innerHTML=" * Required Field ";
+            document.getElementById("s6").style.color = "red";
+        } 
+            }
+            function verif7()
+            {
+               let mp=document.getElementById("mp").value;
+               if(mp.match( /[0-9]/g) && 
+                    mp.match( /[A-Z]/g) && 
+                    mp.match(/[a-z]/g) && 
+                    mp.match( /[^a-zA-Z\d]/g) )
+                   {
+                      document.getElementById("s7").innerHTML=" &#10004";
+                       document.getElementById("s7").style.color = "green";
+                       document.getElementById("mp").style.borderColor = "green";
+            }
+            else {
+                document.getElementById("s7").innerHTML=" * Required Field ";
+                document.getElementById("s7").style.color = "red"
+                document.getElementById("mp").style.borderColor = "red";
+               }}
+        function verif8()
+        {
+            let mp=document.getElementById("mp").value;
+            let mp1=document.getElementById("mp2").value;
+            if(mp==mp1)
+            {
+                document.getElementById("s8").innerHTML=" &#10004";
+               document.getElementById("s8").style.color = "green"; 
+               document.getElementById("mp2").style.borderColor = "green";
+               
+            }
+            else
+            {    document.getElementById("s8").innerHTML=" * required field and verify passwords ";
+                       document.getElementById("s8").style.color = "red";
+                       document.getElementById("mp2").style.borderColor = "red";
+            }
+        }
+        </script>
+    </head>
+    <body >
+        <header>    
+            <div id="it"><img src="1.png" width="120" height="120" alt="photo"/>
+                <span class="titre"><span id="titre1"> club </span><span id="titre2">Robotic</span><span id="titre3">Child</span></span>
+              </div>
+              <div class="menu">
+                <div class="selected" id="ang">
+                    English
+                </div>
+                <ul>
+                    <li>
+                        <a href="inscription.html" class="en">English</a>
+                    </li>
+                    <li>
+                        <a href="inscription.html" class="fr">French</a>
+                    </li>
+                </ul>
+                
+            </div>
+              <nav>
+                <ul>
+                      <li class="j"><a  href="Reception.html">Reception </a></li>
+                      <li class="j"><a  href="Workshops.html">Workshops</a></li>
+                      <li class="j"><a  href="inscriptionang.html">Registration </a></li>
+                      <li class="j"><a   href="contactang.html">contact</a> </li>
+                      <li class="j" id="j1"><input class="i" type="search" name="recherche" placeholder="Recherchez..." > <button>&#128269;</button></li>
+                      <li><a href="conx.html"><img src="contact-book.png" width="145%" height="50"  ></a></li>
+                </ul> 
+            </nav>
+      </header>
+      <main>
+        <center>
+        <h1>Form </h1>
+        <table>
+            <form >
+                <tr> 
+                    <td colspan="2">Mandatory mention &#128522; :<br></td>
+                </tr>
+                <tr>
+                 <td >Parent's last name and first name  </td>
+                 <td><input  class="border"  type="text" value="" id="nom" placeholder="Between Last Name and First Name" onblur="verif1();" required /><span id="s1" ></span></td>
+                </tr>
+                <tr>
+                    <td> Phone number </td>
+                    <td><input class="border"  type="tel" maxlength="8"  value="" placeholder="XXXXXXXX"  id="tel" onblur="verif2();"required /><span id="s2"></span></td>
+                </tr>
+                <tr>
+                    <td>E-mail </td>
+                    <td><input  class="border" type="email" value="" placeholder="mail@serveur.com" id="email" onblur="verif3();"required/><span id="s3"></span></td>
+                </tr>
+                <tr>
+                    <td>Child's first name</td>
+                    <td><input class="border"  type="text" value="" id="nomenf" placeholder="Enter Child's first name" onblur="verif4();" required/><span id="s4"></span></td>
+                </tr>
+               <tr>
+                   <td>Date of Birth </td>
+                   <td><input class="border"  type="date" id="date"required /> <span class="s7"></span></td>
+               </tr>
+               <tr>
+                   <td rowspan="2">What are the favorite digital activities?</td>
+                   <td><input type="radio" id="radio1" name="test" value="" required />Programming </td>
+               </tr>
+                   <tr>
+                       <td><input type="radio" id="radio2" value="" name="test" required/>Robotics <span id="s6"></span></td> 
+                   </tr>
+                <tr>
+                    <td>favourite hobbies</td>
+                    <td><input type="checkbox" id="check1" value=" " onclick="verif6();"  onblur="verif5();">Sport
+                        <input type="checkbox" id="check2" value=" " onclick="verif6();" onblur="verif5();"> Dance
+                        <input type="checkbox" id="check3" value=""  onclick="verif6();"  onblur="verif5();"> Painting
+                        <input type="checkbox" id="check4" value=" " onclick="verif6();"  onblur="verif5();" >Music 
+                        <input type="checkbox" id="check5" value=" "  onclick="verif6();"  onblur="verif5();" >Reading
+                        <span id="s5" ></span>
+                    </td >
+                </tr>
+                <tr>
+                    <td>Passwords </td>
+                    <td><input class="border" type="password" value=""  placeholder="Between passwords"maxlength="8" id="mp" onblur="verif7();"required><span id="s7" ></span></td>
+                </tr>
+                <tr>
+                    <td> Password Confirmation </td>
+                    <td><input class="border" type="password" value="" placeholder="Confirmed passwords" maxlength="8" id="mp2" onblur="verif8();" required><span id="s8"></span></td>
+                </tr>
+                <tr>
+                    <td>Comment ?</td>
+                    <td><textarea ></textarea></td>
+                </tr>
+                <tr >
+                    <td colspan="2" class="nb">NB: passwords must contain at least 1 uppercase character,
+                        at least 1 lowercase character,
+                        at least 1 digit and <br>
+                        at least 1 special character.</td>
+
+                </tr>
+                <tr>
+                    <td colspan="2" class="conx"> <a href="conxang.html">to log in </a> </td>
+                </tr>
+        </table><br> 
+        <input class="botton" type="submit" value="valid"  >
+        <input type="reset" class="botton" value="To erase">
+            </form>
+            <br>
+            <p class="message ">Welcome to the club &#128522;&#128522;   </p>
+    </center>
+    </main>
+    <footer>
+        <br>
+        <br>
+        <span class="adresse">&#127968; Address:</span><br><br>
+        <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1NSke62TDEK2W-yozfmUXxX9PfRJ-YVkR" width="30%" height="300"></iframe>
+     
+        <p class="footer">
+                  &#128222;Phone :
+            <br>
+             55 598 556 .
+             <br>
+              &#128231; E-mail : 
+             <br>
+             clubrobotiqued'enfant@gmail.com .
+             <br>
+          &#128343; Working hours:
+         <br> 
+         Monday-Friday
+         8 am-5pm
+        </p>
+      <span class="resaux"> <a target="_blank" href="https://www.facebook.com"><img  src="facebook.png" width="3%" ></a>
+          <a target="_blank" href="https://www.instagram.com/"><img  src="instagram.webp" width="3%" ></a>
+          <a target="_blank" href="https://accounts.google.com/b/0/AddMailService"><img  src="gmail.png" width="4%" ></a>
+        </span> 
+       </footer>
+    </body>
+</html>

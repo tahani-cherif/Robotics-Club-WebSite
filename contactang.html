@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Club Robotique d'enfant </title>
+        <link href="style4.css" rel="stylesheet" type="text/css"/>
+        <link  rel="icon" href="1.png" alt="photo"/>
+        <meta content="robot">
+        <meta content="robotique">
+        <meta content="programme">
+        <meta content="programmeur">
+        <meta content="Programmation">
+        <meta content="enfant">
+        <meta content="club">
+        <meta content="clubrobotiqued">
+        <script type="text/javascript">
+          function verif1(){
+            let  n=document.getElementById("nom").value ;
+            if(n=="")
+             { document.getElementById("s1").innerHTML=" * Required Field";
+               document.getElementById("s1").style.color = "red";
+               document.getElementById("nom").style.borderColor = "red";
+             }
+               else
+               { document.getElementById("s1").innerHTML=" &#10004";
+               document.getElementById("s1").style.color = "green"; 
+               document.getElementById("nom").style.borderColor = "green"; }
+            }
+            function verif2(){
+            let  n=document.getElementById("prenom").value ;
+            if(n=="")
+             { document.getElementById("s2").innerHTML=" * Required Field";
+               document.getElementById("s2").style.color = "red";
+               document.getElementById("prenom").style.borderColor = "red";
+             }
+               else
+               { document.getElementById("s2").innerHTML=" &#10004";
+               document.getElementById("s2").style.color = "green"; 
+               document.getElementById("prenom").style.borderColor = "green"; }
+            }
+            function checkEmail(email) {
+             let re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+             return re.test(email);
+         }
+         function verif3() {
+             let  email = document.getElementById("email").value;
+              if (checkEmail(email)) {
+                document.getElementById("s3").innerHTML=" &#10004";
+                document.getElementById("s3").style.color = "green";
+                document.getElementById("email").style.borderColor = "green";
+            }  else
+             { document.getElementById("s3").innerHTML="Email address Invalid";
+             document.getElementById("s3").style.color = "red";
+             document.getElementById("email").style.borderColor = "red";}
+             
+         }
+         function verif4(){
+            let  n=document.getElementById("mesg").value ;
+            if(n=="")
+             { document.getElementById("s4").innerHTML=" * Required Field";
+               document.getElementById("s4").style.color = "red";
+               document.getElementById("mesg").style.borderColor = "red";
+             }
+               else
+               { document.getElementById("s4").innerHTML=" &#10004";
+               document.getElementById("s").style.color = "green"; 
+               document.getElementById("mesg").style.borderColor = "green"; }
+            }
+            </script>
+    </head>
+    <body bgcolor="ooffff">
+      <header>
+      <div id="it"><img src="1.png" width="120" height="120" alt="photo"/>
+        <span class="titre"><span id="titre1"> club </span><span id="titre2">Robotic </span><span id="titre3">Child</span></span>
+      </div>
+      <div class="menu">
+        <div class="selected" id="ang">
+            English
+        </div>
+        <ul>
+            <li>
+                <a href="contactang.html" class="en"> English</a>
+            </li>
+            <li>
+                <a href="contact.html" class="fr">French</a>
+            </li>
+        </ul>
+        
+    </div>
+      <nav>
+        <ul>
+              <li class="j"><a  href="Reception.html">Reception </a></li>
+              <li class="j"><a  href="Workshops.html">Workshops</a></li>
+              <li class="j"><a  href="inscriptionang.html">Registration</a></li>
+              <li class="j"><a href="contactang.html">contact</a> </li>
+              <li class="j" id="j1"><input type="search" name="recherche" placeholder="Look for ..." > <button >&#128269;</button></li>
+              <li ><a href="conxang.html"><img src="contact-book.png" width="50px" height="50" ></a></li>
+        </ul> 
+    </nav>
+        </header>
+                <h2> For Contacted: </h2>
+                <p >
+                    &#128222 Phone:  55 598 556 .  &#128231 E-mail :  clubrobotiqued'enfant@gmail.com .
+                     &#127968 Address : cité cheker rawed ariana. <br>
+                     &#128343 Working hours::  Monday-Friday
+                     8 am-5pm
+                        
+                  </p>
+           <hr size="10" width="80%" aligne="center" color="orange">
+           <h2 classe="a">LEAVE US A MESSAGE &#128071</h2>
+           <center>
+           <table  class="formulaire" >
+           <form>
+               <tr>
+                <td>Last name </td>  
+                <td><input   class="input" type="text" id="nom" placeholder="Enter Name "required onblur="verif1();"><br><span id="s1"></span></td>
+            </tr>   
+            <tr>
+            <td> First name</td>
+           <td> <input  class="input" type="text" id="prenom" placeholder="Enter First name" onblur="verif2();" required><br><span id="s2"></span></td>
+        </tr>
+        <tr>
+            <td>E-mail </td>
+           <td><input   class="input" type="email" id="email" placeholder="Entre adresse E-mail" required onblur="verif3();"><br><span id="s3"></span></td> 
+        </tr>
+        <tr>
+           <td>Message</td>
+        <td><input  class="input"  type="text" id="mesg" placeholder="Enter Message" onblur="verif4();" required> <br><span id="s4"></span></td> 
+        </tr>
+        <tr>
+       <td colspan="2"><input class="botton" type="submit" value="To send"  ></td>
+    </tr>
+           </form>
+        </table>
+    </center>
+        <p class="message">we will answer see you soon &#128578 &#128578</p>
+        <footer>
+          <br>
+          <br>
+          <span class="adresse">&#127968; Address :</span><br><br>
+          <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1NSke62TDEK2W-yozfmUXxX9PfRJ-YVkR" width="30%" height="300"></iframe>
+       
+          <p class="footer">
+                    &#128222; Phone :
+              <br>
+               55 598 556 .
+               <br>
+                &#128231; E-mail : 
+               <br>
+               clubrobotiqued'enfant@gmail.com .
+               <br>
+            &#128343; Working hours:
+           <br> 
+           Monday-Friday
+        8 am-5pm
+          </p>
+        <span class="resaux"> <a target="_blank" href="https://www.facebook.com"><img  src="facebook.png" width="3%" ></a>
+            <a target="_blank" href="https://www.instagram.com/"><img  src="instagram.webp" width="3%" ></a>
+            <a target="_blank" href="https://accounts.google.com/b/0/AddMailService"><img  src="gmail.png" width="4%" ></a>
+          </span> 
+         </footer>
+    </body>
+</html>
